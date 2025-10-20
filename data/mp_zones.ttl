@@ -1,0 +1,405 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sdo: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gts: <http://resource.geosciml.org/ontology/timescale/gts#> .
+@prefix ischart: <http://resource.geosciml.org/classifier/ics/ischart/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rank: <http://resource.geosciml.org/ontology/timescale/rank/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ischart:MP_Zones a skos:Collection ;
+    rdfs:isDefinedBy ischart:MP_Scheme ;
+    skos:definition "Collection of Mammal Paleogene Zones (MP zones)"@en ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:member ischart:MP_1,
+        ischart:MP_10,
+        ischart:MP_11,
+        ischart:MP_12,
+        ischart:MP_13,
+        ischart:MP_14,
+        ischart:MP_15,
+        ischart:MP_16,
+        ischart:MP_17A,
+        ischart:MP_17B,
+        ischart:MP_18,
+        ischart:MP_19,
+        ischart:MP_2,
+        ischart:MP_20,
+        ischart:MP_21,
+        ischart:MP_22,
+        ischart:MP_23,
+        ischart:MP_24,
+        ischart:MP_25,
+        ischart:MP_26,
+        ischart:MP_27,
+        ischart:MP_28,
+        ischart:MP_29,
+        ischart:MP_3,
+        ischart:MP_30,
+        ischart:MP_4,
+        ischart:MP_5,
+        ischart:MP_6,
+        ischart:MP_7,
+        ischart:MP_8_9 ;
+    skos:prefLabel "MP Zones"@en .
+
+ischart:MP_1 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 1"@es, "MP 1"@de, "MP 1"@fr, "MP 1"@zh ;
+    skos:broader ischart:Danian ;
+    skos:definition "Placeholder definition for MP 1"@en ;
+    sh:order 1 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 1"@en ;
+    time:hasBeginning [ ischart:inMYA 61.7 ; sdo:marginOfError 0.05 ] ;
+    time:hasEnd [ ischart:inMYA 66.043 ; sdo:marginOfError 0.011 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_10 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 10"@es, "MP 10"@de, "MP 10"@fr, "MP 10"@zh ;
+    skos:broader ischart:Ypresian ;
+    skos:definition "Placeholder definition for MP 10"@en ;
+    sh:order 10 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 10"@en ;
+    time:hasBeginning [ ischart:inMYA 47.8 ] ;
+    time:hasEnd [ ischart:inMYA 50.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_11 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 11"@es, "MP 11"@de, "MP 11"@fr, "MP 11"@zh ;
+    skos:broader ischart:Lutetian ;
+    skos:definition "Placeholder definition for MP 11"@en ;
+    sh:order 11 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 11"@en ;
+    time:hasBeginning [ ischart:inMYA 46.3 ] ;
+    time:hasEnd [ ischart:inMYA 47.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_12 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 12"@es, "MP 12"@de, "MP 12"@fr, "MP 12"@zh ;
+    skos:broader ischart:Lutetian ;
+    skos:definition "Placeholder definition for MP 12"@en ;
+    sh:order 12 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 12"@en ;
+    time:hasBeginning [ ischart:inMYA 44.9 ] ;
+    time:hasEnd [ ischart:inMYA 46.3 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_13 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 13"@es, "MP 13"@de, "MP 13"@fr, "MP 13"@zh ;
+    skos:broader ischart:Lutetian ;
+    skos:definition "Placeholder definition for MP 13"@en ;
+    sh:order 13 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 13"@en ;
+    time:hasBeginning [ ischart:inMYA 43.5 ] ;
+    time:hasEnd [ ischart:inMYA 44.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_14 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 14"@es, "MP 14"@de, "MP 14"@fr, "MP 14"@zh ;
+    skos:broader ischart:Lutetian ;
+    skos:definition "Placeholder definition for MP 14"@en ;
+    sh:order 14 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 14"@en ;
+    time:hasBeginning [ ischart:inMYA 41.2 ] ;
+    time:hasEnd [ ischart:inMYA 43.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_15 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 15"@es, "MP 15"@de, "MP 15"@fr, "MP 15"@zh ;
+    skos:broader ischart:Lutetian ;
+    skos:definition "Placeholder definition for MP 15"@en ;
+    sh:order 15 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 15"@en ;
+    time:hasBeginning [ ischart:inMYA 40.0 ] ;
+    time:hasEnd [ ischart:inMYA 41.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_16 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 16"@es, "MP 16"@de, "MP 16"@fr, "MP 16"@zh ;
+    skos:broader ischart:Bartonian ;
+    skos:definition "Placeholder definition for MP 16"@en ;
+    sh:order 16 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 16"@en ;
+    time:hasBeginning [ ischart:inMYA 37.8 ] ;
+    time:hasEnd [ ischart:inMYA 40.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_17A a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 17A"@es, "MP 17A"@de, "MP 17A"@fr, "MP 17A"@zh ;
+    skos:broader ischart:Priabonian ;
+    skos:definition "Placeholder definition for MP 17A"@en ;
+    sh:order 17 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 17A"@en ;
+    time:hasBeginning [ ischart:inMYA 37.5 ] ;
+    time:hasEnd [ ischart:inMYA 37.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_17B a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 17B"@es, "MP 17B"@de, "MP 17B"@fr, "MP 17B"@zh ;
+    skos:broader ischart:Priabonian ;
+    skos:definition "Placeholder definition for MP 17B"@en ;
+    sh:order 18 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 17B"@en ;
+    time:hasBeginning [ ischart:inMYA 37.0 ] ;
+    time:hasEnd [ ischart:inMYA 37.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_18 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 18"@es, "MP 18"@de, "MP 18"@fr, "MP 18"@zh ;
+    skos:broader ischart:Priabonian ;
+    skos:definition "Placeholder definition for MP 18"@en ;
+    sh:order 19 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 18"@en ;
+    time:hasBeginning [ ischart:inMYA 35.0 ] ;
+    time:hasEnd [ ischart:inMYA 37.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_19 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 19"@es, "MP 19"@de, "MP 19"@fr, "MP 19"@zh ;
+    skos:broader ischart:Priabonian ;
+    skos:definition "Placeholder definition for MP 19"@en ;
+    sh:order 20 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 19"@en ;
+    time:hasBeginning [ ischart:inMYA 34.0 ] ;
+    time:hasEnd [ ischart:inMYA 35.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_2 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 2"@es, "MP 2"@de, "MP 2"@fr, "MP 2"@zh ;
+    skos:broader ischart:Paleocene ;
+    skos:definition "Placeholder definition for MP 2"@en ;
+    sh:order 2 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 2"@en ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_20 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 20"@es, "MP 20"@de, "MP 20"@fr, "MP 20"@zh ;
+    skos:broader ischart:Priabonian ;
+    skos:definition "Placeholder definition for MP 20"@en ;
+    sh:order 21 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 20"@en ;
+    time:hasBeginning [ ischart:inMYA 33.9 ; sdo:marginOfError 0.05 ] ;
+    time:hasEnd [ ischart:inMYA 34.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_21 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 21"@es, "MP 21"@de, "MP 21"@fr, "MP 21"@zh ;
+    skos:broader ischart:Rupelian ;
+    skos:definition "Placeholder definition for MP 21"@en ;
+    sh:order 22 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 21"@en ;
+    time:hasBeginning [ ischart:inMYA 32.5 ] ;
+    time:hasEnd [ ischart:inMYA 33.9 ; sdo:marginOfError 0.05 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_22 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 22"@es, "MP 22"@de, "MP 22"@fr, "MP 22"@zh ;
+    skos:broader ischart:Rupelian ;
+    skos:definition "Placeholder definition for MP 22"@en ;
+    sh:order 23 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 22"@en ;
+    time:hasBeginning [ ischart:inMYA 30.9 ] ;
+    time:hasEnd [ ischart:inMYA 32.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_23 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 23"@es, "MP 23"@de, "MP 23"@fr, "MP 23"@zh ;
+    skos:broader ischart:Rupelian ;
+    skos:definition "Placeholder definition for MP 23"@en ;
+    sh:order 24 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 23"@en ;
+    time:hasBeginning [ ischart:inMYA 30.0 ] ;
+    time:hasEnd [ ischart:inMYA 30.9 ; sdo:marginOfError 0.1 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_24 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 24"@es, "MP 24"@de, "MP 24"@fr, "MP 24"@zh ;
+    skos:broader ischart:Rupelian ;
+    skos:definition "Placeholder definition for MP 24"@en ;
+    sh:order 25 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 24"@en ;
+    time:hasBeginning [ ischart:inMYA 28.8 ] ;
+    time:hasEnd [ ischart:inMYA 30.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_25 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 25"@es, "MP 25"@de, "MP 25"@fr, "MP 25"@zh ;
+    skos:broader ischart:Chattian,
+        ischart:Rupelian ;
+    skos:definition "Placeholder definition for MP 25"@en ;
+    sh:order 26 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 25"@en ;
+    time:hasBeginning [ ischart:inMYA 27.3 ] ;
+    time:hasEnd [ ischart:inMYA 28.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_26 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 26"@es, "MP 26"@de, "MP 26"@fr, "MP 26"@zh ;
+    skos:broader ischart:Chattian ;
+    skos:definition "Placeholder definition for MP 26"@en ;
+    sh:order 27 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 26"@en ;
+    time:hasBeginning [ ischart:inMYA 25.4 ] ;
+    time:hasEnd [ ischart:inMYA 27.3 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_27 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 27"@es, "MP 27"@de, "MP 27"@fr, "MP 27"@zh ;
+    skos:broader ischart:Chattian ;
+    skos:definition "Placeholder definition for MP 27"@en ;
+    sh:order 28 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 27"@en ;
+    time:hasBeginning [ ischart:inMYA 24.6 ; sdo:marginOfError 0.1 ] ;
+    time:hasEnd [ ischart:inMYA 25.4 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_28 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 28"@es, "MP 28"@de, "MP 28"@fr, "MP 28"@zh ;
+    skos:broader ischart:Chattian ;
+    skos:definition "Placeholder definition for MP 28"@en ;
+    sh:order 29 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 28"@en ;
+    time:hasBeginning [ ischart:inMYA 23.9 ] ;
+    time:hasEnd [ ischart:inMYA 24.6 ; sdo:marginOfError 0.1 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_29 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 29"@es, "MP 29"@de, "MP 29"@fr, "MP 29"@zh ;
+    skos:broader ischart:Chattian ;
+    skos:definition "Placeholder definition for MP 29"@en ;
+    sh:order 30 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 29"@en ;
+    time:hasBeginning [ ischart:inMYA 23.2 ] ;
+    time:hasEnd [ ischart:inMYA 23.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_3 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 3"@es, "MP 3"@de, "MP 3"@fr, "MP 3"@zh ;
+    skos:broader ischart:Paleocene ;
+    skos:definition "Placeholder definition for MP 3"@en ;
+    sh:order 3 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 3"@en ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_30 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 30"@es, "MP 30"@de, "MP 30"@fr, "MP 30"@zh ;
+    skos:broader ischart:Chattian ;
+    skos:definition "Placeholder definition for MP 30"@en ;
+    sh:order 31 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 30"@en ;
+    time:hasBeginning [ ischart:inMYA 23.03 ; sdo:marginOfError 0.05 ] ;
+    time:hasEnd [ ischart:inMYA 23.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_4 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 4"@es, "MP 4"@de, "MP 4"@fr, "MP 4"@zh ;
+    skos:broader ischart:Paleocene ;
+    skos:definition "Placeholder definition for MP 4"@en ;
+    sh:order 4 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 4"@en ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_5 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 5"@es, "MP 5"@de, "MP 5"@fr, "MP 5"@zh ;
+    skos:broader ischart:Thanetian ;
+    skos:definition "Placeholder definition for MP 5"@en ;
+    sh:order 5 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 5"@en ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_6 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 6"@es, "MP 6"@de, "MP 6"@fr, "MP 6"@zh ;
+    skos:broader ischart:Thanetian ;
+    skos:definition "Placeholder definition for MP 6"@en ;
+    sh:order 6 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 6"@en ;
+    time:hasBeginning [ ischart:inMYA 56.0 ; sdo:marginOfError 0.1 ] ;
+    time:hasEnd [ ischart:inMYA 57.2 ; sdo:marginOfError 0.1 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_7 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 7"@es, "MP 7"@de, "MP 7"@fr, "MP 7"@zh ;
+    skos:broader ischart:Ypresian ;
+    skos:definition "Placeholder definition for MP 7"@en ;
+    sh:order 7 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 7"@en ;
+    time:hasBeginning [ ischart:inMYA 55.2 ; sdo:marginOfError 0.1 ] ;
+    time:hasEnd [ ischart:inMYA 56.0 ; sdo:marginOfError 0.1 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_8_9 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MP 8+9"@es, "MP 8+9"@de, "MP 8+9"@fr, "MP 8+9"@zh ;
+    skos:broader ischart:Ypresian ;
+    skos:definition "Placeholder definition for MP 8+9"@en ;
+    sh:order 8 ;
+    skos:inScheme ischart:MP_Scheme ;
+    skos:prefLabel "MP 8+9"@en ;
+    time:hasBeginning [ ischart:inMYA 50.8 ; sdo:marginOfError 0.1 ] ;
+    time:hasEnd [ ischart:inMYA 55.2 ; sdo:marginOfError 0.1 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> .
+
+ischart:MP_Scheme a skos:ConceptScheme ;
+    dct:creator "Proyecto Chrono" ;
+    dct:source <https://en.wikipedia.org/wiki/Mammal_Paleogene_zones> ;
+    skos:prefLabel "Mammal Paleogene Zones (MP zones)"@en .

@@ -1,0 +1,312 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sdo: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gts: <http://resource.geosciml.org/ontology/timescale/gts#> .
+@prefix ischart: <http://resource.geosciml.org/classifier/ics/ischart/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rank: <http://resource.geosciml.org/ontology/timescale/rank/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ischart:SALMA_Ages a skos:Collection ;
+    skos:definition "Collection of South American Land Mammal Ages (SALMA)"@en ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:member ischart:Casamayoran,
+        ischart:Chapadmalalan,
+        ischart:Chasicoan,
+        ischart:Colhuehuapian,
+        ischart:Colloncuran,
+        ischart:Deseadan,
+        ischart:Divisaderan,
+        ischart:Ensenadan,
+        ischart:Friasian,
+        ischart:Huayquerian,
+        ischart:Itaboraian,
+        ischart:Laventan,
+        ischart:Lujanian,
+        ischart:Mayoan,
+        ischart:Montehermosan,
+        ischart:Mustersan,
+        ischart:Peligran,
+        ischart:Riochican,
+        ischart:Santacrucian,
+        ischart:Tinguirirican,
+        ischart:Tiupampan,
+        ischart:Uquian ;
+    skos:prefLabel "SALMA Ages"@en .
+
+ischart:Casamayoran a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Casamayorense"@es, "Casamayoran"@de, "Casamayorien"@fr, "卡萨马约尔期"@zh ;
+    skos:broader ischart:Ypresian ;
+    skos:definition "Placeholder definition for Casamayoran"@en ;
+    sh:order 1 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Casamayoran"@en ;
+    time:hasBeginning [ ischart:inMYA 54.0 ] ;
+    time:hasEnd [ ischart:inMYA 48.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Chapadmalalan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Chapadmalalense"@es, "Chapadmalalan"@de, "Chapadmalalien"@fr, "查帕德马拉期"@zh ;
+    skos:broader ischart:Piacenzian ;
+    skos:definition "Placeholder definition for Chapadmalalan"@en ;
+    sh:order 2 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Chapadmalalan"@en ;
+    time:hasBeginning [ ischart:inMYA 4.0 ] ;
+    time:hasEnd [ ischart:inMYA 3.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Chasicoan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Chasicoense"@es, "Chasicoan"@de, "Chasicoen"@fr, "查西科期"@zh ;
+    skos:broader ischart:Messinian,
+        ischart:Tortonian ;
+    skos:definition "Placeholder definition for Chasicoan"@en ;
+    sh:order 3 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Chasicoan"@en ;
+    time:hasBeginning [ ischart:inMYA 10.0 ] ;
+    time:hasEnd [ ischart:inMYA 9.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Colhuehuapian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Colhuehuapiense"@es, "Colhuehuapian"@de, "Colhuehuapien"@fr, "科尔韦瓦皮期"@zh ;
+    skos:broader ischart:Aquitanian,
+        ischart:Chattian ;
+    skos:definition "Placeholder definition for Colhuehuapian"@en ;
+    sh:order 4 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Colhuehuapian"@en ;
+    time:hasBeginning [ ischart:inMYA 21.0 ] ;
+    time:hasEnd [ ischart:inMYA 17.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Colloncuran a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Colloncurense"@es, "Colloncuran"@de, "Colloncurien"@fr, "科隆库拉期"@zh ;
+    skos:broader ischart:Langhian,
+        ischart:Serravallian ;
+    skos:definition "Placeholder definition for Colloncuran"@en ;
+    sh:order 5 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Colloncuran"@en ;
+    time:hasBeginning [ ischart:inMYA 15.5 ] ;
+    time:hasEnd [ ischart:inMYA 13.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Deseadan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Deseadense"@es, "Deseadan"@de, "Deseadien"@fr, "德萨丹期"@zh ;
+    skos:broader ischart:Chattian ;
+    skos:definition "Placeholder definition for Deseadan"@en ;
+    sh:order 6 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Deseadan"@en ;
+    time:hasBeginning [ ischart:inMYA 29.0 ] ;
+    time:hasEnd [ ischart:inMYA 21.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Divisaderan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Divisaderense"@es, "Divisaderan"@de, "Divisaderien"@fr, "迪维萨德罗期"@zh ;
+    skos:broader ischart:Priabonian ;
+    skos:definition "Placeholder definition for Divisaderan"@en ;
+    sh:order 7 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Divisaderan"@en ;
+    time:hasBeginning [ ischart:inMYA 42.0 ] ;
+    time:hasEnd [ ischart:inMYA 36.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Ensenadan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Ensenadense"@es, "Ensenadan"@de, "Ensenadien"@fr, "恩塞纳达期"@zh ;
+    skos:broader ischart:Chibanian ;
+    skos:definition "Placeholder definition for Ensenadan"@en ;
+    sh:order 8 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Ensenadan"@en ;
+    time:hasBeginning [ ischart:inMYA 1.2 ] ;
+    time:hasEnd [ ischart:inMYA 0.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Friasian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Friasense"@es, "Friasian"@de, "Friasien"@fr, "弗里亚斯期"@zh ;
+    skos:definition "Placeholder definition for Friasian"@en ;
+    sh:order 9 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Friasian"@en ;
+    time:hasBeginning [ ischart:inMYA 16.3 ] ;
+    time:hasEnd [ ischart:inMYA 15.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Huayquerian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Huayqueriense"@es, "Huayquerian"@de, "Huayquerien"@fr, "瓦基里亚期"@zh ;
+    skos:broader ischart:Messinian,
+        ischart:Tortonian ;
+    skos:definition "Placeholder definition for Huayquerian"@en ;
+    sh:order 10 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Huayquerian"@en ;
+    time:hasBeginning [ ischart:inMYA 9.0 ] ;
+    time:hasEnd [ ischart:inMYA 6.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Itaboraian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Itaboraiense"@es, "Itaboraian"@de, "Itaboraien"@fr, "伊塔博拉伊期"@zh ;
+    skos:broader ischart:Ypresian ;
+    skos:definition "Placeholder definition for Itaboraian"@en ;
+    sh:order 11 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Itaboraian"@en ;
+    time:hasBeginning [ ischart:inMYA 54.0 ] ;
+    time:hasEnd [ ischart:inMYA 54.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Laventan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Laventense"@es, "Laventan"@de, "Laventien"@fr, "拉文坦期"@zh ;
+    skos:broader ischart:Langhian,
+        ischart:Serravallian ;
+    skos:definition "Placeholder definition for Laventan"@en ;
+    sh:order 12 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Laventan"@en ;
+    time:hasBeginning [ ischart:inMYA 13.8 ] ;
+    time:hasEnd [ ischart:inMYA 11.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Lujanian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Lujaniense"@es, "Lujanian"@de, "Lujanien"@fr, "卢哈尼期"@zh ;
+    skos:broader ischart:UpperPleistocene ;
+    skos:definition "Placeholder definition for Lujanian"@en ;
+    sh:order 13 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Lujanian"@en ;
+    time:hasBeginning [ ischart:inMYA 0.8 ] ;
+    time:hasEnd [ ischart:inMYA 0.011 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Mayoan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Mayoense"@es, "Mayoan"@de, "Mayoen"@fr, "马约期"@zh ;
+    skos:broader ischart:Messinian,
+        ischart:Tortonian ;
+    skos:definition "Placeholder definition for Mayoan"@en ;
+    sh:order 14 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Mayoan"@en ;
+    time:hasBeginning [ ischart:inMYA 11.8 ] ;
+    time:hasEnd [ ischart:inMYA 10.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Montehermosan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Montehermosense"@es, "Montehermosan"@de, "Montehermosien"@fr, "蒙特赫莫斯期"@zh ;
+    skos:broader ischart:Zanclean ;
+    skos:definition "Placeholder definition for Montehermosan"@en ;
+    sh:order 15 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Montehermosan"@en ;
+    time:hasBeginning [ ischart:inMYA 6.8 ] ;
+    time:hasEnd [ ischart:inMYA 4.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Mustersan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Mustersense"@es, "Mustersan"@de, "Mustersien"@fr, "穆斯特斯期"@zh ;
+    skos:broader ischart:Bartonian,
+        ischart:Lutetian ;
+    skos:definition "Placeholder definition for Mustersan"@en ;
+    sh:order 16 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Mustersan"@en ;
+    time:hasBeginning [ ischart:inMYA 48.0 ] ;
+    time:hasEnd [ ischart:inMYA 42.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Peligran a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Peligranse"@es, "Peligran"@de, "Peligrien"@fr, "佩利格兰期"@zh ;
+    skos:broader ischart:Selandian ;
+    skos:definition "Placeholder definition for Peligran"@en ;
+    sh:order 17 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Peligran"@en ;
+    time:hasBeginning [ ischart:inMYA 62.5 ] ;
+    time:hasEnd [ ischart:inMYA 59.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Riochican a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Riochicanse"@es, "Riochican"@de, "Riochicien"@fr, "里奥奇科期"@zh ;
+    skos:broader ischart:Thanetian ;
+    skos:definition "Placeholder definition for Riochican"@en ;
+    sh:order 18 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Riochican"@en ;
+    time:hasBeginning [ ischart:inMYA 57.0 ] ;
+    time:hasEnd [ ischart:inMYA 54.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Santacrucian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Santacrucense"@es, "Santacrucian"@de, "Santacrucien"@fr, "圣克鲁斯期"@zh ;
+    skos:definition "Placeholder definition for Santacrucian"@en ;
+    sh:order 19 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Santacrucian"@en ;
+    time:hasBeginning [ ischart:inMYA 17.5 ] ;
+    time:hasEnd [ ischart:inMYA 16.3 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Tinguirirican a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Tinguiriricanse"@es, "Tinguirirican"@de, "Tinguiriricien"@fr, "廷圭里里卡期"@zh ;
+    skos:broader ischart:Rupelian ;
+    skos:definition "Placeholder definition for Tinguirirican"@en ;
+    sh:order 20 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Tinguirirican"@en ;
+    time:hasBeginning [ ischart:inMYA 36.0 ] ;
+    time:hasEnd [ ischart:inMYA 29.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Tiupampan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Tiupampense"@es, "Tiupampan"@de, "Tiupampien"@fr, "蒂乌潘帕期"@zh ;
+    skos:broader ischart:Danian ;
+    skos:definition "Placeholder definition for Tiupampan"@en ;
+    sh:order 21 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Tiupampan"@en ;
+    time:hasBeginning [ ischart:inMYA 64.5 ] ;
+    time:hasEnd [ ischart:inMYA 62.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:Uquian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Uquiense"@es, "Uquian"@de, "Uquien"@fr, "乌基亚期"@zh ;
+    skos:broader ischart:Calabrian ;
+    skos:definition "Placeholder definition for Uquian"@en ;
+    sh:order 22 ;
+    skos:inScheme ischart:SALMA_Scheme ;
+    skos:prefLabel "Uquian"@en ;
+    time:hasBeginning [ ischart:inMYA 3.0 ] ;
+    time:hasEnd [ ischart:inMYA 1.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/South_American_land_mammal_age> .
+
+ischart:SALMA_Scheme a skos:ConceptScheme ;
+    dct:creator "Proyecto Chrono" ;
+    dct:source <https://en.wikipedia.org/wiki/South_American_land_mammal_age> ;
+    skos:prefLabel "South American Land Mammal Ages (SALMA)"@en .

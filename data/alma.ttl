@@ -1,0 +1,171 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sdo: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gts: <http://resource.geosciml.org/ontology/timescale/gts#> .
+@prefix ischart: <http://resource.geosciml.org/classifier/ics/ischart/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rank: <http://resource.geosciml.org/ontology/timescale/rank/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ischart:ALMA_Ages a skos:Collection ;
+    rdfs:isDefinedBy ischart:ALMA_Scheme ;
+    skos:definition "Collection of Asian Land Mammal Ages (ALMA)"@en ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:member ischart:Arshantan,
+        ischart:Bumbanian,
+        ischart:Ergilian,
+        ischart:Gashatan,
+        ischart:Houldjinian,
+        ischart:Hsandagolian,
+        ischart:Irdinmanhan,
+        ischart:Kekeamuan,
+        ischart:Sharamurunian,
+        ischart:Tabenbulakian,
+        ischart:Ulangochuian ;
+    skos:prefLabel "ALMA Ages"@en .
+
+ischart:Arshantan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Arshantanense"@es, "Arshantan"@de, "Arshantan"@fr, "阿尔善特期"@zh ;
+    skos:broader ischart:Eocene ;
+    skos:definition "Placeholder definition for Arshantan"@en ;
+    sh:order 1 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Arshantan"@en ;
+    time:hasBeginning [ ischart:inMYA 37.2 ] ;
+    time:hasEnd [ ischart:inMYA 48.6 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Bumbanian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Bumbaniense"@es, "Bumbanian"@de, "Bumbanian"@fr, "邦巴期"@zh ;
+    skos:broader ischart:Eocene,
+        ischart:Paleocene ;
+    skos:definition "Placeholder definition for Bumbanian"@en ;
+    sh:order 2 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Bumbanian"@en ;
+    time:hasBeginning [ ischart:inMYA 48.6 ] ;
+    time:hasEnd [ ischart:inMYA 55.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Ergilian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Ergiliense"@es, "Ergilian"@de, "Ergilian"@fr, "额尔吉勒期"@zh ;
+    skos:broader ischart:Eocene,
+        ischart:Oligocene ;
+    skos:definition "Placeholder definition for Ergilian"@en ;
+    sh:order 3 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Ergilian"@en ;
+    time:hasBeginning [ ischart:inMYA 33.9 ] ;
+    time:hasEnd [ ischart:inMYA 37.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Gashatan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Gashatanense"@es, "Gashatan"@de, "Gashatan"@fr, "嘎莎特期"@zh ;
+    skos:broader ischart:Paleocene ;
+    skos:definition "Placeholder definition for Gashatan"@en ;
+    sh:order 4 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Gashatan"@en ;
+    time:hasBeginning [ ischart:inMYA 55.8 ] ;
+    time:hasEnd [ ischart:inMYA 58.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Houldjinian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Houldjiniense"@es, "Houldjinian"@de, "Houldjinian"@fr, "霍尔德金期"@zh ;
+    skos:broader ischart:Eocene,
+        ischart:Oligocene ;
+    skos:definition "Placeholder definition for Houldjinian"@en ;
+    sh:order 5 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Houldjinian"@en ;
+    time:hasBeginning [ ischart:inMYA 33.9 ] ;
+    time:hasEnd [ ischart:inMYA 37.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Hsandagolian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Hsandagoliano"@es, "Hsandagolian"@de, "Hsandagolian"@fr, "山达格期"@zh ;
+    skos:broader ischart:Oligocene ;
+    skos:definition "Placeholder definition for Hsandagolian"@en ;
+    sh:order 6 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Hsandagolian"@en ;
+    time:hasBeginning [ ischart:inMYA 23.03 ] ;
+    time:hasEnd [ ischart:inMYA 33.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Irdinmanhan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Irdinmanhanense"@es, "Irdinmanhan"@de, "Irdinmanhan"@fr, "伊尔丁曼哈期"@zh ;
+    skos:broader ischart:Eocene ;
+    skos:definition "Placeholder definition for Irdinmanhan"@en ;
+    sh:order 7 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Irdinmanhan"@en ;
+    time:hasBeginning [ ischart:inMYA 37.2 ] ;
+    time:hasEnd [ ischart:inMYA 48.6 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Kekeamuan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Kekeamuanense"@es, "Kekeamuan"@de, "Kekeamuan"@fr, "克克阿木期"@zh ;
+    skos:broader ischart:Oligocene ;
+    skos:definition "Placeholder definition for Kekeamuan"@en ;
+    sh:order 8 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Kekeamuan"@en ;
+    time:hasBeginning [ ischart:inMYA 28.4 ] ;
+    time:hasEnd [ ischart:inMYA 33.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Sharamurunian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Sharamurunianense"@es, "Sharamurunian"@de, "Sharamurunian"@fr, "沙拉木伦期"@zh ;
+    skos:broader ischart:Eocene ;
+    skos:definition "Placeholder definition for Sharamurunian"@en ;
+    sh:order 9 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Sharamurunian"@en ;
+    time:hasBeginning [ ischart:inMYA 37.2 ] ;
+    time:hasEnd [ ischart:inMYA 48.6 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Tabenbulakian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Tabenbulakiense"@es, "Tabenbulakian"@de, "Tabenbulakian"@fr, "塔本布拉克期"@zh ;
+    skos:broader ischart:Miocene,
+        ischart:Oligocene ;
+    skos:definition "Placeholder definition for Tabenbulakian"@en ;
+    sh:order 10 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Tabenbulakian"@en ;
+    time:hasBeginning [ ischart:inMYA 23.03 ] ;
+    time:hasEnd [ ischart:inMYA 28.4 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:Ulangochuian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Ulangochuianense"@es, "Ulangochuian"@de, "Ulangochuian"@fr, "乌兰戈楚期"@zh ;
+    skos:broader ischart:Eocene,
+        ischart:Oligocene ;
+    skos:definition "Placeholder definition for Ulangochuian"@en ;
+    sh:order 11 ;
+    skos:inScheme ischart:ALMA_Scheme ;
+    skos:prefLabel "Ulangochuian"@en ;
+    time:hasBeginning [ ischart:inMYA 33.9 ] ;
+    time:hasEnd [ ischart:inMYA 37.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Asian_land_mammal_age> .
+
+ischart:ALMA_Scheme a skos:ConceptScheme ;
+    dct:creator "Proyecto Chrono" ;
+    dct:source <https://en.wikipedia.org/wiki/Asian_land_mammal_age> ;
+    skos:prefLabel "Asian Land Mammal Ages (ALMA)"@en .

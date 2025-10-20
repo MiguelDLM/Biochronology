@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta Cronostratigráfica Internacional + Biozonas | ICS 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>Biocronologías del mundo</h1>
+            <p>Carta Cronostratigráfica Internacional v2024-12</p>
+            <p>Con Biozonas de Mamíferos Terrestres (NALMA, SALMA, ELMA, ALMA, MP zones)</p>
+        </header>
+
+        <div class="controls-panel">
+            <div class="controls-row">
+                <div class="control-group">
+                    <label class="control-title">Fuentes de datos:</label>
+                </div>
+                
+                <div class="control-group">
+                    <input type="checkbox" id="source-nalma" class="source-checkbox" data-source="nalma" checked>
+                    <label for="source-nalma">NALMA (Norteamérica)</label>
+                </div>
+                
+                <div class="control-group">
+                    <input type="checkbox" id="source-salma" class="source-checkbox" data-source="salma" checked>
+                    <label for="source-salma">SALMA (Sudamérica)</label>
+                </div>
+                
+                <div class="control-group">
+                    <input type="checkbox" id="source-elma" class="source-checkbox" data-source="elma" checked>
+                    <label for="source-elma">ELMA (Europa)</label>
+                </div>
+                
+                <div class="control-group">
+                    <input type="checkbox" id="source-alma" class="source-checkbox" data-source="alma" checked>
+                    <label for="source-alma">ALMA (Asia)</label>
+                </div>
+                
+                <div class="control-group">
+                    <input type="checkbox" id="source-mp" class="source-checkbox" data-source="mp" checked>
+                    <label for="source-mp">MP Zones (Paleógeno)</label>
+                </div>
+            </div>
+            
+            <div class="controls-row">
+                <div class="control-group">
+                    <label for="time-range">Rango temporal:</label>
+                    <select id="time-range">
+                        <option value="0-66">Cenozoico completo (0-66 Ma)</option>
+                        <option value="0-23">Neógeno + Cuaternario (0-23 Ma)</option>
+                        <option value="23-66">Paleógeno (23-66 Ma)</option>
+                        <option value="0-100">Extendido (0-100 Ma)</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="custom-min">Min (Ma):</label>
+                    <input type="number" id="custom-min" class="custom-range-input" step="0.01" placeholder="ej. 2.58">
+                    <label for="custom-max">Max (Ma):</label>
+                    <input type="number" id="custom-max" class="custom-range-input" step="0.01" placeholder="ej. 23.04">
+                    <button class="btn" id="apply-range">Aplicar</button>
+                </div>
+                
+                <div class="control-group">
+                    <label for="scale-mode">Escala:</label>
+                    <select id="scale-mode">
+                        <option value="proportional">Proporcional (Ma)</option>
+                        <option value="logarithmic">Logarítmica</option>
+                        <option value="equal">Filas iguales</option>
+                    </select>
+                </div>
+                
+                <button class="btn" onclick="exportChart()">📷 Exportar PNG</button>
+                <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
+            </div>
+        </div>
+
+    <div id="loading-overlay" class="loading-overlay">
+            <div class="loading-spinner">
+                <div class="loading-text">Cargando datos cronostratigráficos...</div>
+            </div>
+        </div>
+
+        <div id="error-container"></div>
+
+        <div class="chart-wrapper">
+            <div class="chart-container" id="chart-container">
+                <!-- Chart will be rendered here by JavaScript -->
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p><strong>Fuentes de datos:</strong></p>
+            <p>
+                <a href="https://stratigraphy.org/chart" target="_blank" rel="noopener noreferrer">International Commission on Stratigraphy (ICS)</a> | 
+                <a href="https://github.com/i-c-stratigraphy/chart" target="_blank" rel="noopener noreferrer">ICS GitHub Repository</a>
+            </p>
+            <p>
+                Biozonas: 
+                <a href="https://en.wikipedia.org/wiki/North_American_land_mammal_age" target="_blank" rel="noopener noreferrer">NALMAs</a> | 
+                <a href="https://en.wikipedia.org/wiki/South_American_land_mammal_age" target="_blank" rel="noopener noreferrer">SALMAs</a> | 
+                <a href="https://en.wikipedia.org/wiki/European_land_mammal_age" target="_blank" rel="noopener noreferrer">ELMAs</a> | 
+                <a href="https://en.wikipedia.org/wiki/Asian_land_mammal_age" target="_blank" rel="noopener noreferrer">ALMAs</a> | 
+                <a href="https://en.wikipedia.org/wiki/Mammal_Paleogene_zones" target="_blank" rel="noopener noreferrer">MP zones</a>
+            </p>
+            <p class="footer-meta">© 2025 - Proyecto Chrono | Datos © International Commission on Stratigraphy, 2024</p>
+        </footer>
+    </div>
+
+    <!-- N3.js for Turtle/RDF parsing -->
+    <script src="https://unpkg.com/n3@1.16.3/browser/n3.min.js"></script>
+    <script src="chart-renderer.js"></script>
+</body>
+</html>

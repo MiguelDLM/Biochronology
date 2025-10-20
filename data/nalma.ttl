@@ -1,0 +1,375 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sdo: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gts: <http://resource.geosciml.org/ontology/timescale/gts#> .
+@prefix ischart: <http://resource.geosciml.org/classifier/ics/ischart/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rank: <http://resource.geosciml.org/ontology/timescale/rank/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ischart:NALMA_Ages a skos:Collection ;
+    skos:definition "Collection of North American Land Mammal Ages (NALMA)"@en ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:member ischart:Aquilian,
+        ischart:Arikareean,
+        ischart:Barstovian,
+        ischart:Blancan,
+        ischart:Bridgerian,
+        ischart:Chadronian,
+        ischart:Clarendonian,
+        ischart:Clarkforkian,
+        ischart:Duchesnean,
+        ischart:Edmontonian,
+        ischart:Hemingfordian,
+        ischart:Hemphillian,
+        ischart:Irvingtonian,
+        ischart:Judithian,
+        ischart:Kirtlandian,
+        ischart:Lancian,
+        ischart:Orellan,
+        ischart:Puercan,
+        ischart:Rancholabrean,
+        ischart:Saintaugustinean,
+        ischart:Santarosean,
+        ischart:Tiffanian,
+        ischart:Torrejonian,
+        ischart:Uintan,
+        ischart:Wahweapian,
+        ischart:Wasatchian,
+        ischart:Whitneyan ;
+    skos:prefLabel "NALMA Ages"@en .
+
+ischart:Aquilian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Aquiliano"@es, "Aquilian"@de, "Aquilien"@fr, "阿基拉期"@zh ;
+    skos:broader ischart:UpperCretaceous ;
+    skos:definition "Placeholder definition for Aquilian"@en ;
+    sh:order 1 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Aquilian"@en ;
+    time:hasBeginning [ ischart:inMYA 84.0 ] ;
+    time:hasEnd [ ischart:inMYA 82.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Arikareean a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Arikareean"@es, "Arikareean"@de, "Arikareeen"@fr, "阿里卡里期"@zh ;
+    skos:broader ischart:Miocene,
+        ischart:Oligocene ;
+    skos:definition "Placeholder definition for Arikareean"@en ;
+    sh:order 2 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Arikareean"@en ;
+    time:hasBeginning [ ischart:inMYA 29.5 ] ;
+    time:hasEnd [ ischart:inMYA 18.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Barstovian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Barstovian"@es, "Barstovian"@de, "Barstovien"@fr, "巴斯托夫期"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for Barstovian"@en ;
+    sh:order 3 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Barstovian"@en ;
+    time:hasBeginning [ ischart:inMYA 16.3 ] ;
+    time:hasEnd [ ischart:inMYA 12.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Blancan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Blancan"@es, "Blancan"@de, "Blancan"@fr, "布兰卡期"@zh ;
+    skos:broader ischart:Pliocene ;
+    skos:definition "Placeholder definition for Blancan"@en ;
+    sh:order 4 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Blancan"@en ;
+    time:hasBeginning [ ischart:inMYA 4.7 ] ;
+    time:hasEnd [ ischart:inMYA 1.4 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Bridgerian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Bridgerian"@es, "Bridgerian"@de, "Bridgerien"@fr, "布里杰期"@zh ;
+    skos:broader ischart:Eocene ;
+    skos:definition "Placeholder definition for Bridgerian"@en ;
+    sh:order 5 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Bridgerian"@en ;
+    time:hasBeginning [ ischart:inMYA 50.5 ] ;
+    time:hasEnd [ ischart:inMYA 46.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Chadronian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Chadronian"@es, "Chadronian"@de, "Chadronien"@fr, "查德龙期"@zh ;
+    skos:broader ischart:Eocene,
+        ischart:Oligocene ;
+    skos:definition "Placeholder definition for Chadronian"@en ;
+    sh:order 6 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Chadronian"@en ;
+    time:hasBeginning [ ischart:inMYA 37.0 ] ;
+    time:hasEnd [ ischart:inMYA 33.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Clarendonian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Clarendonian"@es, "Clarendonian"@de, "Clarendonien"@fr, "克拉伦登期"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for Clarendonian"@en ;
+    sh:order 7 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Clarendonian"@en ;
+    time:hasBeginning [ ischart:inMYA 12.5 ] ;
+    time:hasEnd [ ischart:inMYA 9.4 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Clarkforkian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Clarkforkian"@es, "Clarkforkian"@de, "Clarkforkien"@fr, "克拉克福克期"@zh ;
+    skos:broader ischart:Eocene,
+        ischart:Paleocene ;
+    skos:definition "Placeholder definition for Clarkforkian"@en ;
+    sh:order 8 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Clarkforkian"@en ;
+    time:hasBeginning [ ischart:inMYA 56.2 ] ;
+    time:hasEnd [ ischart:inMYA 54.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Duchesnean a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Duchesnean"@es, "Duchesnean"@de, "Duchesneen"@fr, "杜申期"@zh ;
+    skos:broader ischart:Eocene ;
+    skos:definition "Placeholder definition for Duchesnean"@en ;
+    sh:order 9 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Duchesnean"@en ;
+    time:hasBeginning [ ischart:inMYA 39.7 ] ;
+    time:hasEnd [ ischart:inMYA 37.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Edmontonian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Edmontoniano"@es, "Edmontonian"@de, "Edmontonien"@fr, "埃德蒙顿期"@zh ;
+    skos:broader ischart:UpperCretaceous ;
+    skos:definition "Placeholder definition for Edmontonian"@en ;
+    sh:order 10 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Edmontonian"@en ;
+    time:hasBeginning [ ischart:inMYA 73.0 ] ;
+    time:hasEnd [ ischart:inMYA 67.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Hemingfordian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Hemingfordian"@es, "Hemingfordian"@de, "Hemingfordien"@fr, "海明福德期"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for Hemingfordian"@en ;
+    sh:order 11 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Hemingfordian"@en ;
+    time:hasBeginning [ ischart:inMYA 18.5 ] ;
+    time:hasEnd [ ischart:inMYA 16.3 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Hemphillian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Hemphillian"@es, "Hemphillian"@de, "Hemphillien"@fr, "亨普希尔期"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for Hemphillian"@en ;
+    sh:order 12 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Hemphillian"@en ;
+    time:hasBeginning [ ischart:inMYA 9.4 ] ;
+    time:hasEnd [ ischart:inMYA 4.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Irvingtonian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Irvingtonian"@es, "Irvingtonian"@de, "Irvingtonien"@fr, "欧文顿期"@zh ;
+    skos:broader ischart:Pleistocene ;
+    skos:definition "Placeholder definition for Irvingtonian"@en ;
+    sh:order 13 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Irvingtonian"@en ;
+    time:hasBeginning [ ischart:inMYA 1.4 ] ;
+    time:hasEnd [ ischart:inMYA 0.21 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Judithian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Judithiano"@es, "Judithian"@de, "Judithien"@fr, "朱迪思期"@zh ;
+    skos:broader ischart:UpperCretaceous ;
+    skos:definition "Placeholder definition for Judithian"@en ;
+    sh:order 14 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Judithian"@en ;
+    time:hasBeginning [ ischart:inMYA 79.0 ] ;
+    time:hasEnd [ ischart:inMYA 75.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Kirtlandian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Kirtlandiano"@es, "Kirtlandian"@de, "Kirtlandien"@fr, "柯特兰期"@zh ;
+    skos:broader ischart:UpperCretaceous ;
+    skos:definition "Placeholder definition for Kirtlandian"@en ;
+    sh:order 15 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Kirtlandian"@en ;
+    time:hasBeginning [ ischart:inMYA 75.0 ] ;
+    time:hasEnd [ ischart:inMYA 73.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Lancian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Lanciano"@es, "Lancian"@de, "Lancien"@fr, "兰西安期"@zh ;
+    skos:broader ischart:UpperCretaceous ;
+    skos:definition "Placeholder definition for Lancian"@en ;
+    sh:order 16 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Lancian"@en ;
+    time:hasBeginning [ ischart:inMYA 67.0 ] ;
+    time:hasEnd [ ischart:inMYA 66.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Orellan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Orellan"@es, "Orellan"@de, "Orellan"@fr, "奥雷拉期"@zh ;
+    skos:broader ischart:Oligocene ;
+    skos:definition "Placeholder definition for Orellan"@en ;
+    sh:order 17 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Orellan"@en ;
+    time:hasBeginning [ ischart:inMYA 33.9 ] ;
+    time:hasEnd [ ischart:inMYA 31.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Puercan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Puercan"@es, "Puercan"@de, "Puercan"@fr, "普尔科期"@zh ;
+    skos:broader ischart:Paleocene ;
+    skos:definition "Placeholder definition for Puercan"@en ;
+    sh:order 18 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Puercan"@en ;
+    time:hasBeginning [ ischart:inMYA 66.0 ] ;
+    time:hasEnd [ ischart:inMYA 63.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Rancholabrean a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Rancholabrean"@es, "Rancholabrean"@de, "Rancholabreen"@fr, "兰乔拉布尔期"@zh ;
+    skos:broader ischart:Pleistocene ;
+    skos:definition "Placeholder definition for Rancholabrean"@en ;
+    sh:order 19 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Rancholabrean"@en ;
+    time:hasBeginning [ ischart:inMYA 0.21 ] ;
+    time:hasEnd [ ischart:inMYA 0.014 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Saintaugustinean a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Saintaugustinean"@es, "Saintaugustinean"@de, "Saintaugustineen"@fr, "圣奥古斯丁期"@zh ;
+    skos:broader ischart:Holocene ;
+    skos:definition "Placeholder definition for Saintaugustinean"@en ;
+    sh:order 20 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Saintaugustinean"@en ;
+    time:hasBeginning [ ischart:inMYA 0.004 ] ;
+    time:hasEnd [ ischart:inMYA 0.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Santarosean a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Santarosean"@es, "Santarosean"@de, "Santaroseen"@fr, "圣罗莎期"@zh ;
+    skos:broader ischart:Holocene ;
+    skos:definition "Placeholder definition for Santarosean"@en ;
+    sh:order 21 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Santarosean"@en ;
+    time:hasBeginning [ ischart:inMYA 0.014 ] ;
+    time:hasEnd [ ischart:inMYA 0.004 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Tiffanian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Tiffanian"@es, "Tiffanian"@de, "Tiffanien"@fr, "蒂法尼期"@zh ;
+    skos:broader ischart:Paleocene ;
+    skos:definition "Placeholder definition for Tiffanian"@en ;
+    sh:order 22 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Tiffanian"@en ;
+    time:hasBeginning [ ischart:inMYA 60.9 ] ;
+    time:hasEnd [ ischart:inMYA 56.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Torrejonian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Torrejonian"@es, "Torrejonian"@de, "Torrejonien"@fr, "托瑞琼期"@zh ;
+    skos:broader ischart:Paleocene ;
+    skos:definition "Placeholder definition for Torrejonian"@en ;
+    sh:order 23 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Torrejonian"@en ;
+    time:hasBeginning [ ischart:inMYA 63.8 ] ;
+    time:hasEnd [ ischart:inMYA 60.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Uintan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Uintan"@es, "Uintan"@de, "Uintan"@fr, "犹因特期"@zh ;
+    skos:broader ischart:Eocene ;
+    skos:definition "Placeholder definition for Uintan"@en ;
+    sh:order 24 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Uintan"@en ;
+    time:hasBeginning [ ischart:inMYA 46.2 ] ;
+    time:hasEnd [ ischart:inMYA 39.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Wahweapian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Wahweapiano"@es, "Wahweapian"@de, "Wahweapien"@fr, "瓦韦普期"@zh ;
+    skos:broader ischart:UpperCretaceous ;
+    skos:definition "Placeholder definition for Wahweapian"@en ;
+    sh:order 25 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Wahweapian"@en ;
+    time:hasBeginning [ ischart:inMYA 82.0 ] ;
+    time:hasEnd [ ischart:inMYA 79.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Wasatchian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Wasatchian"@es, "Wasatchian"@de, "Wasatchien"@fr, "瓦萨奇期"@zh ;
+    skos:broader ischart:Eocene ;
+    skos:definition "Placeholder definition for Wasatchian"@en ;
+    sh:order 26 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Wasatchian"@en ;
+    time:hasBeginning [ ischart:inMYA 54.9 ] ;
+    time:hasEnd [ ischart:inMYA 50.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:Whitneyan a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Whitneyan"@es, "Whitneyan"@de, "Whitneyen"@fr, "惠特尼期"@zh ;
+    skos:broader ischart:Oligocene ;
+    skos:definition "Placeholder definition for Whitneyan"@en ;
+    sh:order 27 ;
+    skos:inScheme ischart:NALMA_Scheme ;
+    skos:prefLabel "Whitneyan"@en ;
+    time:hasBeginning [ ischart:inMYA 31.8 ] ;
+    time:hasEnd [ ischart:inMYA 29.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/North_American_land_mammal_age> .
+
+ischart:NALMA_Scheme a skos:ConceptScheme ;
+    dct:creator "Proyecto Chrono" ;
+    dct:source <https://en.wikipedia.org/wiki/North_American_land_mammal_age> ;
+    skos:prefLabel "North American Land Mammal Ages (NALMA)"@en .

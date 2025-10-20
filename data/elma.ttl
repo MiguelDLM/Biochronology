@@ -1,0 +1,381 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sdo: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gts: <http://resource.geosciml.org/ontology/timescale/gts#> .
+@prefix ischart: <http://resource.geosciml.org/classifier/ics/ischart/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rank: <http://resource.geosciml.org/ontology/timescale/rank/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ischart:ELMA_Ages a skos:Collection ;
+    skos:definition "Collection of European Land Mammal Ages (ELMA)"@en ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:member ischart:Agenian,
+        ischart:Arvernian,
+        ischart:Aurelian,
+        ischart:Cernaysian,
+        ischart:Galerian,
+        ischart:Geiseltalian,
+        ischart:Grauvian,
+        ischart:Headonian,
+        ischart:MN1,
+        ischart:MN10,
+        ischart:MN11,
+        ischart:MN12,
+        ischart:MN13,
+        ischart:MN14,
+        ischart:MN15,
+        ischart:MN16,
+        ischart:MN17,
+        ischart:MN2,
+        ischart:MN3,
+        ischart:MN4,
+        ischart:MN5,
+        ischart:MN6,
+        ischart:MN7_8,
+        ischart:MN9,
+        ischart:Neustrian,
+        ischart:Robiacian,
+        ischart:Suevian,
+        ischart:Villafranchian ;
+    skos:prefLabel "ELMA Ages"@en .
+
+ischart:Agenian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Ageniense"@es, "Agenian"@de, "Agenien"@fr, "阿让期"@zh ;
+    skos:broader ischart:Aquitanian ;
+    skos:definition "Placeholder definition for Agenian"@en ;
+    sh:order 1 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Agenian"@en ;
+    time:hasBeginning [ ischart:inMYA 23.03 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Arvernian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Arverniense"@es, "Arvernian"@de, "Arvernien"@fr, "阿尔韦纳期"@zh ;
+    skos:broader ischart:Chattian ;
+    skos:definition "Placeholder definition for Arvernian"@en ;
+    sh:order 2 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Arvernian"@en ;
+    time:hasBeginning [ ischart:inMYA 29.2 ] ;
+    time:hasEnd [ ischart:inMYA 23.03 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Aurelian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Aureliano"@es, "Aurelian"@de, "Aurélien"@fr, "奥勒良期"@zh ;
+    skos:broader ischart:Pleistocene ;
+    skos:definition "Placeholder definition for Aurelian"@en ;
+    sh:order 3 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Aurelian"@en ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Cernaysian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Cernaysiense"@es, "Cernaysian"@de, "Cernaysien"@fr, "塞尔奈期"@zh ;
+    skos:broader ischart:Thanetian ;
+    skos:definition "Placeholder definition for Cernaysian"@en ;
+    sh:order 4 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Cernaysian"@en ;
+    time:hasBeginning [ ischart:inMYA 55.9 ] ;
+    time:hasEnd [ ischart:inMYA 55.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Galerian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Galeriense"@es, "Galerian"@de, "Galérien"@fr, "加莱里期"@zh ;
+    skos:broader ischart:Pleistocene ;
+    skos:definition "Placeholder definition for Galerian"@en ;
+    sh:order 5 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Galerian"@en ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Geiseltalian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Geiseltaliense"@es, "Geiseltalian"@de, "Geiseltalien"@fr, "盖泽尔特期"@zh ;
+    skos:broader ischart:Lutetian ;
+    skos:definition "Placeholder definition for Geiseltalian"@en ;
+    sh:order 6 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Geiseltalian"@en ;
+    time:hasBeginning [ ischart:inMYA 48.5 ] ;
+    time:hasEnd [ ischart:inMYA 42.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Grauvian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Grauviense"@es, "Grauvian"@de, "Grauvien"@fr, "格劳夫期"@zh ;
+    skos:broader ischart:Lutetian ;
+    skos:definition "Placeholder definition for Grauvian"@en ;
+    sh:order 7 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Grauvian"@en ;
+    time:hasBeginning [ ischart:inMYA 50.8 ] ;
+    time:hasEnd [ ischart:inMYA 48.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Headonian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Headoniense"@es, "Headonian"@de, "Headonien"@fr, "海德期"@zh ;
+    skos:broader ischart:Rupelian ;
+    skos:definition "Placeholder definition for Headonian"@en ;
+    sh:order 8 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Headonian"@en ;
+    time:hasBeginning [ ischart:inMYA 37.2 ] ;
+    time:hasEnd [ ischart:inMYA 33.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN1 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 1"@es, "MN 1"@de, "MN 1"@fr, "MN 1"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 1"@en ;
+    sh:order 9 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 1"@en ;
+    time:hasBeginning [ ischart:inMYA 23.03 ] ;
+    time:hasEnd [ ischart:inMYA 20.44 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN10 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 10"@es, "MN 10"@de, "MN 10"@fr, "MN 10"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 10"@en ;
+    sh:order 10 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 10"@en ;
+    time:hasBeginning [ ischart:inMYA 9.7 ] ;
+    time:hasEnd [ ischart:inMYA 8.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN11 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 11"@es, "MN 11"@de, "MN 11"@fr, "MN 11"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 11"@en ;
+    sh:order 11 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 11"@en ;
+    time:hasBeginning [ ischart:inMYA 8.7 ] ;
+    time:hasEnd [ ischart:inMYA 7.75 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN12 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 12"@es, "MN 12"@de, "MN 12"@fr, "MN 12"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 12"@en ;
+    sh:order 12 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 12"@en ;
+    time:hasBeginning [ ischart:inMYA 7.75 ] ;
+    time:hasEnd [ ischart:inMYA 7.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN13 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 13"@es, "MN 13"@de, "MN 13"@fr, "MN 13"@zh ;
+    skos:broader ischart:Pliocene ;
+    skos:definition "Placeholder definition for MN 13"@en ;
+    sh:order 13 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 13"@en ;
+    time:hasBeginning [ ischart:inMYA 7.0 ] ;
+    time:hasEnd [ ischart:inMYA 4.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN14 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 14"@es, "MN 14"@de, "MN 14"@fr, "MN 14"@zh ;
+    skos:broader ischart:Pliocene ;
+    skos:definition "Placeholder definition for MN 14"@en ;
+    sh:order 14 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 14"@en ;
+    time:hasBeginning [ ischart:inMYA 4.9 ] ;
+    time:hasEnd [ ischart:inMYA 4.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN15 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 15"@es, "MN 15"@de, "MN 15"@fr, "MN 15"@zh ;
+    skos:broader ischart:Pliocene ;
+    skos:definition "Placeholder definition for MN 15"@en ;
+    sh:order 15 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 15"@en ;
+    time:hasBeginning [ ischart:inMYA 4.2 ] ;
+    time:hasEnd [ ischart:inMYA 3.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN16 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 16"@es, "MN 16"@de, "MN 16"@fr, "MN 16"@zh ;
+    skos:broader ischart:Pliocene ;
+    skos:definition "Placeholder definition for MN 16"@en ;
+    sh:order 16 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 16"@en ;
+    time:hasBeginning [ ischart:inMYA 3.2 ] ;
+    time:hasEnd [ ischart:inMYA 2.5 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN17 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 17"@es, "MN 17"@de, "MN 17"@fr, "MN 17"@zh ;
+    skos:broader ischart:Pliocene,
+        ischart:Quaternary ;
+    skos:definition "Placeholder definition for MN 17"@en ;
+    sh:order 17 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 17"@en ;
+    time:hasBeginning [ ischart:inMYA 2.5 ] ;
+    time:hasEnd [ ischart:inMYA 2.0 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN2 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 2"@es, "MN 2"@de, "MN 2"@fr, "MN 2"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 2"@en ;
+    sh:order 18 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 2"@en ;
+    time:hasBeginning [ ischart:inMYA 20.44 ] ;
+    time:hasEnd [ ischart:inMYA 16.9 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN3 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 3"@es, "MN 3"@de, "MN 3"@fr, "MN 3"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 3"@en ;
+    sh:order 19 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 3"@en ;
+    time:hasBeginning [ ischart:inMYA 16.9 ] ;
+    time:hasEnd [ ischart:inMYA 15.97 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN4 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 4"@es, "MN 4"@de, "MN 4"@fr, "MN 4"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 4"@en ;
+    sh:order 20 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 4"@en ;
+    time:hasBeginning [ ischart:inMYA 15.97 ] ;
+    time:hasEnd [ ischart:inMYA 13.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN5 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 5"@es, "MN 5"@de, "MN 5"@fr, "MN 5"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 5"@en ;
+    sh:order 21 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 5"@en ;
+    time:hasBeginning [ ischart:inMYA 13.7 ] ;
+    time:hasEnd [ ischart:inMYA 12.75 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN6 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 6"@es, "MN 6"@de, "MN 6"@fr, "MN 6"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 6"@en ;
+    sh:order 22 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 6"@en ;
+    time:hasBeginning [ ischart:inMYA 12.75 ] ;
+    time:hasEnd [ ischart:inMYA 11.1 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN7_8 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 7/8"@es, "MN 7/8"@de, "MN 7/8"@fr, "MN 7/8"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 7/8"@en ;
+    sh:order 23 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 7/8"@en ;
+    time:hasBeginning [ ischart:inMYA 11.1 ] ;
+    time:hasEnd [ ischart:inMYA 9.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:MN9 a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "MN 9"@es, "MN 9"@de, "MN 9"@fr, "MN 9"@zh ;
+    skos:broader ischart:Miocene ;
+    skos:definition "Placeholder definition for MN 9"@en ;
+    sh:order 24 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "MN 9"@en ;
+    time:hasBeginning [ ischart:inMYA 9.7 ] ;
+    time:hasEnd [ ischart:inMYA 8.7 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Neustrian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Neustriense"@es, "Neustrian"@de, "Neustrien"@fr, "诺斯特期"@zh ;
+    skos:broader ischart:Ypresian ;
+    skos:definition "Placeholder definition for Neustrian"@en ;
+    sh:order 25 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Neustrian"@en ;
+    time:hasBeginning [ ischart:inMYA 55.0 ] ;
+    time:hasEnd [ ischart:inMYA 50.8 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Robiacian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Robiaciense"@es, "Robiacian"@de, "Robiacien"@fr, "罗比亚克期"@zh ;
+    skos:broader ischart:Bartonian,
+        ischart:Priabonian ;
+    skos:definition "Placeholder definition for Robiacian"@en ;
+    sh:order 26 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Robiacian"@en ;
+    time:hasBeginning [ ischart:inMYA 42.7 ] ;
+    time:hasEnd [ ischart:inMYA 37.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Suevian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Sueviense"@es, "Suevian"@de, "Suevien"@fr, "苏维期"@zh ;
+    skos:broader ischart:Rupelian ;
+    skos:definition "Placeholder definition for Suevian"@en ;
+    sh:order 27 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Suevian"@en ;
+    time:hasBeginning [ ischart:inMYA 33.8 ] ;
+    time:hasEnd [ ischart:inMYA 29.2 ] ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:Villafranchian a skos:Concept ;
+    gts:rank rank:Age ;
+    skos:altLabel "Villafranchiense"@es, "Villafranchian"@de, "Villafranchien"@fr, "维拉弗朗期"@zh ;
+    skos:broader ischart:Pleistocene,
+        ischart:Pliocene ;
+    skos:definition "Placeholder definition for Villafranchian"@en ;
+    sh:order 28 ;
+    skos:inScheme ischart:ELMA_Scheme ;
+    skos:prefLabel "Villafranchian"@en ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/European_land_mammal_age> .
+
+ischart:ELMA_Scheme a skos:ConceptScheme ;
+    dct:creator "Proyecto Chrono" ;
+    dct:source <https://en.wikipedia.org/wiki/European_land_mammal_age> ;
+    skos:prefLabel "European Land Mammal Ages (ELMA)"@en .
