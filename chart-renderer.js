@@ -788,6 +788,7 @@ function setupEventListeners() {
 function exportChart() {
   const container = document.getElementById('chart-container');
   const header = document.querySelector('.header');
+  const footer = document.querySelector('.footer');
   
   if (!container) {
     alert('No hay tabla para exportar.');
@@ -810,13 +811,14 @@ function exportChart() {
   loadingMsg.innerHTML = '📸 Generando imagen PNG...<br><small style="opacity: 0.8;">Esto puede tomar unos segundos</small>';
   document.body.appendChild(loadingMsg);
 
-  // Create a temporary container with header + chart
+  // Create a temporary container with header + chart + footer
   const exportContainer = document.createElement('div');
   exportContainer.style.background = '#ffffff';
   exportContainer.style.padding = '20px';
   exportContainer.style.position = 'absolute';
   exportContainer.style.left = '-9999px';
   exportContainer.style.top = '0';
+  exportContainer.style.maxWidth = '1920px';
   
   // Clone header if exists
   if (header) {
@@ -827,7 +829,26 @@ function exportChart() {
   
   // Clone chart
   const chartClone = container.cloneNode(true);
+  chartClone.style.marginBottom = '20px';
   exportContainer.appendChild(chartClone);
+  
+  // Clone footer if exists
+  if (footer) {
+    const footerClone = footer.cloneNode(true);
+    footerClone.style.marginTop = '20px';
+    footerClone.style.padding = '15px';
+    footerClone.style.background = '#f5f6fa';
+    footerClone.style.borderRadius = '6px';
+    footerClone.style.fontSize = '11px';
+    footerClone.style.lineHeight = '1.6';
+    // Remove links functionality for export (make them text only)
+    const links = footerClone.querySelectorAll('a');
+    links.forEach(link => {
+      link.style.color = '#1a5490';
+      link.style.textDecoration = 'none';
+    });
+    exportContainer.appendChild(footerClone);
+  }
   
   document.body.appendChild(exportContainer);
 
