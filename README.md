@@ -11,16 +11,19 @@ Proyecto para visualizar la escala temporal geológica de la ICS (International 
   - ELMA (European Land Mammal Ages)
   - ALMA (Asian Land Mammal Ages)
   - MP zones (Mammal Paleogene Zones)
+- **Columnas Redimensionables**: Ajusta el ancho de las columnas manualmente o automáticamente
+  - Redimensionamiento manual mediante drag & drop
+  - Distribución automática basada en contenido
+  - Anchos personalizados se mantienen en impresión
 
 ## Estructura del Proyecto
 
 ```
 Chrono/
 ├── index.html          # Página principal de visualización
-├── chart.js            # Lógica JavaScript para renderizar la carta
+├── chart-renderer.js   # Lógica JavaScript para renderizar la carta
+├── styles.css          # Estilos CSS para la visualización
 ├── README.md           # Este archivo
-├── scripts/
-│   └── download_ics_data.py  # Script para descargar datos de ICS
 └── data/
     ├── nalma.json      # Biozonas norteamericanas (27 zonas)
     ├── salma.json      # Biozonas sudamericanas (22 zonas)
@@ -31,16 +34,10 @@ Chrono/
 
 ## Uso
 
-### 1. Descargar datos de ICS (opcional)
-
-```bash
-cd scripts
-python download_ics_data.py
-```
 
 Esto descargará el archivo `chart.ttl` del repositorio oficial de ICS en GitHub.
 
-### 2. Abrir la visualización
+### 1. Abrir la visualización
 
 Simplemente abre `index.html` en tu navegador web:
 
@@ -55,10 +52,32 @@ python -m http.server 8000
 # Luego visita: http://localhost:8000
 ```
 
-### 3. Usar los filtros
+### 2. Usar los filtros
 
-- **Período**: Filtra por Cenozoico, Mesozoico, Paleozoico o todos
+- **Período**: Filtra por Cenozoico, Paleogeno, Neogeno + Cuaternario o ingresa un rango personalizado
 - **Biozonas**: Muestra todas las biozonas o solo un tipo específico
+- **Modo de escala**: Proporcional, logarítmica o filas iguales
+
+### 3. Ajustar columnas
+
+#### Redimensionamiento Manual
+1. Posiciona el cursor en el borde derecho de cualquier encabezado de columna
+2. El cursor cambiará a ↔️ (redimensionar)
+3. Haz clic y arrastra para ajustar el ancho
+4. Todas las columnas son redimensionables, incluyendo la última
+
+#### Distribución Automática
+1. Haz clic en el botón "📐 Distribuir columnas"
+2. El sistema calculará automáticamente el ancho óptimo para cada columna basándose en:
+   - El texto del encabezado
+   - El contenido más largo visible en los datos actuales
+   - Límites: mínimo 70px, máximo 350px
+3. Ideal para optimizar el espacio según los datos visibles
+
+#### Restaurar Anchos Predeterminados
+- Haz clic en "↔️ Restablecer columnas" para volver a los anchos originales
+
+**Nota**: Los anchos personalizados se mantienen durante la sesión y en la versión impresa. Ver `COLUMNAS_REDIMENSIONABLES.md` para más detalles.
 
 ## Fuentes de Datos
 
@@ -90,47 +109,30 @@ python -m http.server 8000
    - 30 zonas consecutivas
    - Rango: MP 1 (66.043 Ma) → MP 30 (23.03 Ma)
 
-## Formato de Datos JSON
-
-Cada archivo JSON de biozonas sigue esta estructura:
-
-```json
-[
-  {
-    "name": "Nombre de la biozona",
-    "start_ma": 0.0,
-    "end_ma": 5.0,
-    "epoch": "Época/Etapa geológica"
-  }
-]
-```
 
 ## Desarrollo
 
-### Requisitos
-
-- Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Python 3.x (solo para descargar datos de ICS)
 
 ### Mejoras Futuras
 
-- [ ] Parser para archivos TTL de ICS
-- [ ] Integración completa de datos ICS en la visualización
-- [ ] Escala temporal proporcional a las edades
-- [ ] Colores específicos por era/período/época
 - [ ] Zoom y navegación interactiva
-- [ ] Exportación a PNG/SVG/PDF
 - [ ] Búsqueda y resaltado de biozonas
 - [ ] Información detallada en tooltips
-- [ ] Comparación lado a lado de diferentes biozonas
-- [ ] Sincronización con base de datos en línea
+- [ ] Persistencia de anchos de columnas en localStorage
+- [ ] Presets de distribución de columnas (compacto, normal, extendido)
+- [ ] Reordenamiento de columnas mediante drag & drop
+
+## Documentación Adicional
+
+- **COLUMNAS_REDIMENSIONABLES.md**: Guía completa sobre el sistema de columnas redimensionables
+- **RESUMEN_IMPLEMENTACION.md**: Detalles técnicos de la implementación
+- **DEMO_COLUMNAS.html**: Demostración interactiva de las funcionalidades de columnas
 
 ## Contribuciones
 
 Este proyecto integra datos de:
 - International Commission on Stratigraphy (ICS)
 - Wikipedia (artículos de biozonas)
-- Comunidad científica paleontológica
 
 ## Licencia
 
@@ -145,5 +147,5 @@ Para preguntas, sugerencias o contribuciones, por favor abre un issue en el repo
 
 ---
 
-**Última actualización**: 2025
-**Versión**: 1.0.0
+**Última actualización**: Octubre 2025
+**Versión**: 1.1.0 - Columnas Redimensionables

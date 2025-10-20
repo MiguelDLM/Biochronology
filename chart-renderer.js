@@ -13,11 +13,11 @@ const SOURCE_FILES = {
 };
 
 const BIOZONE_LABELS = {
-  nalma: 'NALMA (Norteamérica)',
-  salma: 'SALMA (Sudamérica)',
-  elma: 'ELMA (Europa)',
-  alma: 'ALMA (Asia)',
-  mp: 'MP Zones (Europa)'
+  nalma: 'NALMA',
+  salma: 'SALMA',
+  elma: 'ELMA',
+  alma: 'ALMA',
+  mp: 'MP Zones'
 };
 
 const COLUMN_BASE = [
@@ -69,6 +69,7 @@ const PREFIXES = {
 
 let parsedData = {};
 let currentScaleMode = 'proportional';
+let customColumnWidths = {}; // Store user-adjusted column widths
 
 // =====================================================================
 // Utility Functions
@@ -266,6 +267,11 @@ function renderChart(selectedSources) {
   const geoColorIndex = buildGeoColorIndex(icsItems);
   const columns = getColumnDefinitions(selectedSources);
 
+  // Apply column widths as CSS variables for print support
+  columns.forEach(col => {
+    document.documentElement.style.setProperty(`--col-width-${col.key}`, `${col.width}px`);
+  });
+
   const header = renderHeader(columns);
   container.appendChild(header);
 
@@ -281,6 +287,7 @@ function renderChart(selectedSources) {
     columnEl.style.left = `${currentLeft}px`;
     columnEl.style.width = `${column.width}px`;
     columnEl.style.height = `${scale.totalHeight}px`;
+    columnEl.dataset.columnKey = column.key; // For print identification
 
     if (column.type === 'time') {
       renderTimeColumn(columnEl, scale, minMa, maxMa);
@@ -318,12 +325,27 @@ function renderHeader(columns) {
   const header = document.createElement('div');
   header.className = 'chart-header';
   let cumulative = 0;
-  for (const column of columns) {
+  for (let i = 0; i < columns.length; i++) {
+    const column = columns[i];
     const cell = document.createElement('div');
     cell.className = `column-header header-${column.key}`;
     cell.style.width = `${column.width}px`;
     cell.style.left = `${cumulative}px`;
     cell.textContent = column.label;
+    
+    // Add resize handle to all columns (including the last one)
+    const resizeHandle = document.createElement('div');
+    resizeHandle.className = 'column-resize-handle';
+    resizeHandle.dataset.columnIndex = i;
+    
+    // Add drag functionality
+    resizeHandle.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      startColumnResize(e, columns, i);
+    });
+    
+    cell.appendChild(resizeHandle);
+    
     header.appendChild(cell);
     cumulative += column.width;
   }
@@ -339,7 +361,50 @@ function getColumnDefinitions(selectedSources) {
       defs.push({ key, label: BIOZONE_LABELS[key], width: 180, type: 'biozone' });
     }
   }
+  
+  // Apply custom widths if they exist
+  for (const def of defs) {
+    if (customColumnWidths[def.key]) {
+      def.width = customColumnWidths[def.key];
+    }
+  }
+  
   return defs;
+}
+
+// =====================================================================
+// Column Resize Functionality
+// =====================================================================
+
+function startColumnResize(e, columns, columnIndex) {
+  const startX = e.clientX;
+  const startWidth = columns[columnIndex].width;
+  const columnKey = columns[columnIndex].key;
+  
+  document.body.style.cursor = 'col-resize';
+  document.body.style.userSelect = 'none';
+  
+  function onMouseMove(e) {
+    const deltaX = e.clientX - startX;
+    const newWidth = Math.max(50, startWidth + deltaX); // Min width 50px
+    
+    // Update the custom width
+    customColumnWidths[columnKey] = newWidth;
+    
+    // Re-render the chart with new widths
+    const selectedSources = getSelectedSources();
+    renderChart(selectedSources);
+  }
+  
+  function onMouseUp() {
+    document.body.style.cursor = '';
+    document.body.style.userSelect = '';
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
+  }
+  
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup', onMouseUp);
 }
 
 // =====================================================================
@@ -721,7 +786,200 @@ function setupEventListeners() {
 }
 
 function exportChart() {
-  alert('La exportación a PNG estará disponible en una versión futura.');
+  const container = document.getElementById('chart-container');
+  const header = document.querySelector('.header');
+  
+  if (!container) {
+    alert('No hay tabla para exportar.');
+    return;
+  }
+
+  // Show loading indicator
+  const loadingMsg = document.createElement('div');
+  loadingMsg.style.position = 'fixed';
+  loadingMsg.style.top = '50%';
+  loadingMsg.style.left = '50%';
+  loadingMsg.style.transform = 'translate(-50%, -50%)';
+  loadingMsg.style.background = 'rgba(0,0,0,0.85)';
+  loadingMsg.style.color = 'white';
+  loadingMsg.style.padding = '20px 40px';
+  loadingMsg.style.borderRadius = '8px';
+  loadingMsg.style.zIndex = '10000';
+  loadingMsg.style.fontFamily = 'Arial, sans-serif';
+  loadingMsg.style.fontSize = '16px';
+  loadingMsg.innerHTML = '📸 Generando imagen PNG...<br><small style="opacity: 0.8;">Esto puede tomar unos segundos</small>';
+  document.body.appendChild(loadingMsg);
+
+  // Create a temporary container with header + chart
+  const exportContainer = document.createElement('div');
+  exportContainer.style.background = '#ffffff';
+  exportContainer.style.padding = '20px';
+  exportContainer.style.position = 'absolute';
+  exportContainer.style.left = '-9999px';
+  exportContainer.style.top = '0';
+  
+  // Clone header if exists
+  if (header) {
+    const headerClone = header.cloneNode(true);
+    headerClone.style.marginBottom = '20px';
+    exportContainer.appendChild(headerClone);
+  }
+  
+  // Clone chart
+  const chartClone = container.cloneNode(true);
+  exportContainer.appendChild(chartClone);
+  
+  document.body.appendChild(exportContainer);
+
+  // Use html2canvas to capture the export container
+  html2canvas(exportContainer, {
+    backgroundColor: '#ffffff',
+    scale: 2, // Higher resolution (2x)
+    logging: false,
+    useCORS: true,
+    allowTaint: true,
+    width: exportContainer.scrollWidth,
+    height: exportContainer.scrollHeight
+  }).then(canvas => {
+    // Remove temporary container
+    document.body.removeChild(exportContainer);
+    
+    // Convert canvas to blob and download
+    canvas.toBlob(blob => {
+      // Generate filename with current date and time range
+      const [minMa, maxMa] = getTimeRange();
+      const date = new Date().toISOString().split('T')[0];
+      const scaleMode = currentScaleMode || 'proportional';
+      const filename = `biochronology_${minMa}-${maxMa}Ma_${scaleMode}_${date}.png`;
+      
+      // Create download link
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      
+      // Remove loading message
+      document.body.removeChild(loadingMsg);
+      
+      // Show success message
+      const successMsg = document.createElement('div');
+      successMsg.style.position = 'fixed';
+      successMsg.style.top = '20px';
+      successMsg.style.right = '20px';
+      successMsg.style.background = '#28a745';
+      successMsg.style.color = 'white';
+      successMsg.style.padding = '15px 25px';
+      successMsg.style.borderRadius = '6px';
+      successMsg.style.zIndex = '10000';
+      successMsg.style.fontFamily = 'Arial, sans-serif';
+      successMsg.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+      successMsg.innerHTML = `✓ Imagen guardada: <strong>${filename}</strong>`;
+      document.body.appendChild(successMsg);
+      
+      setTimeout(() => {
+        successMsg.style.transition = 'opacity 0.5s';
+        successMsg.style.opacity = '0';
+        setTimeout(() => document.body.removeChild(successMsg), 500);
+      }, 4000);
+    }, 'image/png');
+  }).catch(error => {
+    console.error('Error al exportar:', error);
+    if (document.body.contains(exportContainer)) {
+      document.body.removeChild(exportContainer);
+    }
+    document.body.removeChild(loadingMsg);
+    alert('Error al generar la imagen. Por favor, intenta de nuevo.');
+  });
+}
+
+function resetColumnWidths() {
+  customColumnWidths = {};
+  const selectedSources = getSelectedSources();
+  renderChart(selectedSources);
+}
+
+function autoDistributeColumns() {
+  const selectedSources = getSelectedSources();
+  const [minMa, maxMa] = getTimeRange();
+  const icsItems = parsedData.ics || [];
+  
+  // Get column definitions
+  const columns = getColumnDefinitionsBase(selectedSources);
+  
+  // Create a temporary canvas to measure text width accurately
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  
+  // Calculate optimal widths for each column
+  columns.forEach(column => {
+    let maxTextWidth = 0;
+    
+    // Measure header text (bold, 0.92em ~ 12px)
+    ctx.font = 'bold 12px "Open Sans", "Segoe UI", Arial, sans-serif';
+    maxTextWidth = ctx.measureText(column.label).width;
+    
+    // For time column, consider the range values
+    if (column.type === 'time') {
+      ctx.font = 'bold 11px "Open Sans", "Segoe UI", Arial, sans-serif';
+      const rangeText = `${maxMa.toFixed(maxMa < 10 ? 1 : 0)} (Presente)`;
+      maxTextWidth = Math.max(maxTextWidth, ctx.measureText(rangeText).width);
+      maxTextWidth = Math.max(maxTextWidth, ctx.measureText('0 (Presente)').width);
+    }
+    // For ICS columns, check all relevant items
+    else if (column.type === 'ics' && column.ranks) {
+      ctx.font = '600 12px "Open Sans", "Segoe UI", Arial, sans-serif';
+      const relevant = icsItems.filter(item => 
+        item.rank && column.ranks.includes(item.rank) && 
+        overlapsRange(item, Math.min(minMa, maxMa), Math.max(minMa, maxMa))
+      );
+      relevant.forEach(item => {
+        if (item.label) {
+          const textWidth = ctx.measureText(item.label).width;
+          maxTextWidth = Math.max(maxTextWidth, textWidth);
+        }
+      });
+    }
+    // For biozone columns, check biozone items
+    else if (column.type === 'biozone' && parsedData[column.key]) {
+      ctx.font = '600 12px "Open Sans", "Segoe UI", Arial, sans-serif';
+      const relevant = parsedData[column.key].filter(item => 
+        overlapsRange(item, Math.min(minMa, maxMa), Math.max(minMa, maxMa))
+      );
+      relevant.forEach(item => {
+        if (item.label) {
+          const textWidth = ctx.measureText(item.label).width;
+          maxTextWidth = Math.max(maxTextWidth, textWidth);
+        }
+      });
+    }
+    
+    // Add padding: 16px (8px on each side) + some extra for borders and visual comfort
+    const paddedWidth = maxTextWidth + 32;
+    
+    // Apply constraints: Min 70px (for very short text), Max 350px (for very long text)
+    const constrainedWidth = Math.min(350, Math.max(70, paddedWidth));
+    
+    customColumnWidths[column.key] = Math.round(constrainedWidth);
+  });
+  
+  // Re-render with new widths
+  renderChart(selectedSources);
+}
+
+// Helper function to get base column definitions without custom widths
+function getColumnDefinitionsBase(selectedSources) {
+  const defs = COLUMN_BASE.map(col => ({ ...col }));
+  const biozones = ['nalma', 'salma', 'elma', 'mp', 'alma'];
+  for (const key of biozones) {
+    if (selectedSources.includes(key)) {
+      defs.push({ key, label: BIOZONE_LABELS[key], width: 180, type: 'biozone' });
+    }
+  }
+  return defs;
 }
 
 // Print helper: temporarily set a class so CSS can adjust backgrounds for print

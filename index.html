@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta Cronostratigráfica Internacional + Biozonas | ICS 2024</title>
+    <title>Biocronologías del mundo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -42,7 +42,7 @@
                 
                 <div class="control-group">
                     <input type="checkbox" id="source-mp" class="source-checkbox" data-source="mp" checked>
-                    <label for="source-mp">MP Zones (Paleógeno)</label>
+                    <label for="source-mp">MP Zones (Paleógeno/Europa)</label>
                 </div>
             </div>
             
@@ -74,6 +74,8 @@
                     </select>
                 </div>
                 
+                <button class="btn" onclick="autoDistributeColumns()">📐 Distribuir columnas</button>
+                <button class="btn" onclick="resetColumnWidths()">↔️ Restablecer columnas</button>
                 <button class="btn" onclick="exportChart()">📷 Exportar PNG</button>
                 <button class="btn" onclick="window.print()">🖨️ Imprimir</button>
             </div>
@@ -107,12 +109,14 @@
                 <a href="https://en.wikipedia.org/wiki/Asian_land_mammal_age" target="_blank" rel="noopener noreferrer">ALMAs</a> | 
                 <a href="https://en.wikipedia.org/wiki/Mammal_Paleogene_zones" target="_blank" rel="noopener noreferrer">MP zones</a>
             </p>
-            <p class="footer-meta">© 2025 - Proyecto Chrono | Datos © International Commission on Stratigraphy, 2024</p>
+            <p class="footer-meta">© 2025 Biocronologías v1.0 - Museo Virtual Nacional | Datos © International Commission on Stratigraphy, 2024</p>
         </footer>
     </div>
 
     <!-- N3.js for Turtle/RDF parsing -->
     <script src="https://unpkg.com/n3@1.16.3/browser/n3.min.js"></script>
+    <!-- html2canvas for PNG export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="chart-renderer.js"></script>
 </body>
 </html>

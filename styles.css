@@ -196,6 +196,7 @@ body {
     position: absolute;
     top: 0;
     height: 52px;
+    background: linear-gradient(180deg, #1f3d69 0%, #09294d 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,10 +208,34 @@ body {
     letter-spacing: 0.3px;
     border-right: 1px solid rgba(255, 255, 255, 0.35);
     text-transform: uppercase;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none; /* Prevent text selection during resize */
 }
 
 .column-header:last-of-type {
     border-right: none;
+}
+
+/* Column resize handle */
+.column-resize-handle {
+    position: absolute;
+    right: -4px;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+    cursor: col-resize;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+}
+
+.column-resize-handle:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.column-resize-handle:active {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .chart-body {
@@ -340,6 +365,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
+    border: 1px solid rgba(15, 23, 42, 0.2);
     border-left: 6px solid #1a1a1a;
     border-radius: 4px;
     padding: 3px 8px 3px 10px;
@@ -412,6 +438,14 @@ body {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
+    
+    /* Hide resize handles in print */
+    .column-resize-handle {
+        display: none !important;
+    }
+    
+    /* Preserve custom column widths in print using inline styles */
+    /* The JavaScript sets inline styles which override default widths */
 
     /* Simplify appearance for print — remove shadows which may not render well */
     .header, .controls-panel, .chart-wrapper, .chart-header, .chart-body, .chart-column, .ics-box, .biozone-box, .time-label {
@@ -450,6 +484,33 @@ body {
     .ics-box, .biozone-box {
         break-inside: avoid !important;
         page-break-inside: avoid !important;
+    }
+    
+    /* Ensure borders are visible in print for both ICS and biozone boxes */
+    .ics-box {
+        border: 1px solid #333 !important;
+    }
+    
+    .biozone-box {
+        border: 1px solid #333 !important;
+        border-left-width: 6px !important;
+    }
+    
+    /* Ensure biozone border colors are preserved in print */
+    .biozone-nalma .biozone-box { 
+        border-left-color: #28a745 !important; 
+    }
+    .biozone-salma .biozone-box { 
+        border-left-color: #ffc107 !important; 
+    }
+    .biozone-elma .biozone-box { 
+        border-left-color: #17a2b8 !important; 
+    }
+    .biozone-alma .biozone-box { 
+        border-left-color: #dc3545 !important; 
+    }
+    .biozone-mp .biozone-box { 
+        border-left-color: #6f42c1 !important; 
     }
 }
 
